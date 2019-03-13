@@ -1,5 +1,3 @@
-import {Restaurant} from './Restaurant';
-
 export class Address {
 
   // start region attributes
