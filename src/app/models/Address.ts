@@ -1,6 +1,6 @@
 export class Address {
 
-  // start region attributes
+  // region attributes
 
   streetNumber: number;
   apartment: string;
@@ -9,7 +9,7 @@ export class Address {
   province: string;
   country: string;
 
-  // end region attributes
+  // region attributes
 
 
 }
