@@ -2,7 +2,7 @@
   <mat-card-header>
     <mat-card-title>{{restaurant.name | uppercase}}</mat-card-title>
     <mat-card-subtitle>
-      T: <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a>&nbsp;
+      <span *ngIf="restaurant.phone"> T: <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a>&nbsp;</span>
 
      <span *ngIf="restaurant.website"> W:<a href="{{restaurant.website}}" target="_blank"> {{restaurant.name}}</a>
     </span>
@@ -15,3 +15,4 @@
     </p>
   </mat-card-content>
 </mat-card>
+<br>
