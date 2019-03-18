@@ -12,15 +12,15 @@ date: Date;
 
   constructor(args){
 
-    if(args !== null){
+    //if(args !== null){
 
-      args.author ? this.author : null;
-      args.rating ? this.rating : null;
-      args.title ? this.title : null;
-      args.body ? this.body : null;
-      args.date ? this.date : null;
+    this.author = args.author;
+    this.rating = args.rating;
+    this.title = args.title;
+    this.body  = args.body;
+    this.date  = args.date;
 
-    }
+   // }
 
 
 

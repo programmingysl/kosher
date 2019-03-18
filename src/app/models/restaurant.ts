@@ -13,20 +13,38 @@ export class Restaurant {
   reviews: Review[];
   location: Address;
 
-/*
-   constructor(args?) {
-
-     this.name = args.name;
-     this.website = args.website;
-     this.phone = args.phone;
-     this.rating = args.rating;
-     this.avgMealPrice = args.avgMealPrice;
-   }
-   */
 
   constructor(args?) {
 
-    if(args !== null){
+
+    if(args !== null) {
+
+
+      this.name = args.name;
+      this.website = args.website;
+      this.phone = args.phone;
+      this.rating = args.rating;
+      this.avgMealPrice = args.avgMealPrice;
+
+      // location= new Address(arguments?);
+      // console.log(args.location.city);
+
+
+      // I don't know why this works but it works !!!
+      this.location = new Address({});
+      this.location.streetNumber = args.location.streetNumber;
+      this.location.streetName = args.location.streetName;
+      this.location.apartment = args.location.apartment;
+      this.location.city = args.location.city;
+      this.location.province = args.location.province;
+      this.location.country = args.location.country;
+    }
+  }
+}
+/*
+  constructor(args?) {
+
+    //if(args !== null){
 
 
       args.name ? this.name : null;
@@ -35,20 +53,22 @@ export class Restaurant {
       args.rating ? this.rating : null;
       args.avgMealPrice ? this.avgMealPrice : null;
 
-      this.location = new Address();
 
-      args.address.streetNumber ? this.location.streetNumber : null;
-      args.address.streetName ? this.location.streetName : null;
-      args.address.apartment ? this.location.apartment : null;
-      args.address.city ? this.location.city : null;
-      args.address.country ? this.location.country : null;
-      args.address.province ? this.location.province : null;
 
-    }
+      args.location.streetNumber ? this.location.streetNumber : null;
+      args.location.streetName ? this.location.streetName : null;
+      args.location.apartment ? this.location.apartment : null;
+      args.location.city ? this.location.city : null;
+      args.location.country ? this.location.country : null;
+      args.location.province ? this.location.province : null;
+
+    //}
 
 
 
   }
 
 }
+
+*/
 
